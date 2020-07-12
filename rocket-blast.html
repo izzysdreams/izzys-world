@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <style>
+        body {
+            color: aqua;
+            background: url(stars.jpg);
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 188px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        .start-button {
+            background: red;
+            font-size:30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 1;
+            transition: opacity 3s;
+        }
+
+        .title {
+            opacity: 1;
+            transition: opacity 5s;
+        }
+
+        .rocket {
+            width: 100px;
+            /* display:none; */
+            position: absolute;
+            left: 50%;
+            margin-left: -50px;
+            bottom: 0px;
+            opacity: 0;
+        }
+
+        .countdown {
+            font-size: 300px
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">ROCKET BLAST</h1>
+
+    <p class="countdown">5</p>
+    <button class="start-button">start</button>
+
+
+
+    <img src="rocket.png" alt="a rocket" class="rocket"  />
+
+    <script>
+        const startButton = document.querySelector('.start-button');
+        const title = document.querySelector('.title');
+        const rocket = document.querySelector('.rocket');
+
+        startButton.addEventListener('click', () => {
+            title.style.opacity = 0;
+            startButton.style.opacity = 0;
+        });
+    </script>
+</body>
+
+</html>
